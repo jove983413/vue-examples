@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue.js 渲染列表示例</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        .class-a { color: red; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="todo in todos" v-bind:class="{ 'class-a': $index == 1}">
+                {{ $index }} - {{ todo.text }}
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="./../vue/vue.min.js"></script>
+    <script type="text/javascript" src="./simple2.js"></script>
+</body>
+</html>
